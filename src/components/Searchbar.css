@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css?family=Bowlby+One+SC");
+.searchBar {
+  padding-top: 5cm;
+  display:-webkit-flex;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+}
+
+.list-group {
+  border-radius: 10px;
+  width:50%;
+  padding: 0.5%;
+  margin: 0.3%;
+  align-self:inherit;
+  font-family:  'Arial Narrow Bold', sans-serif;
+}
+
+#searchList:hover{
+  background-color: white;
+  border-bottom: 1px solid;
+  border-bottom-style: dashed;
+  border-bottom-color: red;
+  background-color: rgb(84, 164, 217);
+  background-image:url('../images/clipboard.svg');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin:content-box;
+  cursor: pointer;
+}
+
+
+#searchList {
+  transition: 500ms;
+  background-color:white;
+}
+
+.searchBox {
+  border-radius: 3px;
+  border: 0ch;
+  width:50%;
+  padding: 0.5%;
+  margin: 0.3%;
+  align-self: center;
+  font-family:  'Arial Narrow Bold', sans-serif;
+  background:white  url(../images/searchicon2.jpeg)right no-repeat;
+  background-size: 0.9cm;
+}
