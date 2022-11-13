@@ -5,32 +5,9 @@ import './Searchbar.css';
 export default function Searchbar(){
   
 
-  const slangs = [
-    {
-      word: "abdabs",
-      meaning: "Noun. Terror, the frights, nerves. Often heard as the screaming abdabs. Also very occasionally 'habdabs'. [1940s]"
-    },
-    {
-      word: "ablute",
-      meaning: "nai janvu"
-    },
-    {
-      word: "absobloodylutely",
-      meaning: "nai khabar"
-    },
-    {
-      word: "shiva",
-      meaning: "angery lord/aghori"
-    },
-    {
-      word: "vishnu",
-      meaning: "chill lord"
-    },
-    {
-      word: "bhrmha",
-      meaning: "big lord"
-    }
-  ]
+//   const slangs = [
+   
+//   ]
 
 
   const[text,setText] = useState('');
