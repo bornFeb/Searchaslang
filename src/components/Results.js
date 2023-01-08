@@ -1,4 +1,4 @@
-import Component from 'react';
+import {Component} from 'react';
 import data from "../csvjson.json";
 
 

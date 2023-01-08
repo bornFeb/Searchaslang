@@ -4,8 +4,6 @@ import Searchbar from './components/Searchbar.js';
 
 function App() {
 
-  
-  
   // Initialize Firebase
   return (
     <div className="App">
