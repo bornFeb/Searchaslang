@@ -22,7 +22,7 @@ export default function MyProfile(){
                 <span className='Linkedin_img' role="image"><img src={ln} style={{maxWidth: 30,position:'relative',left:'auto',marginRight:'5px'}}/></span>
                 <span className='twitter_img' role="image"><img src={twitter} style={{maxWidth: 30,position:'relative',left:'auto',marginRight:'5px'}}/></span>
               </p>
-              <p className="card-text"><small className="text-muted">Last updated 3 mins ago</small></p>
+              <p className="card-text"><small style={{color: "white"}}>Last updated 3 mins ago</small></p>
             </div>
           </div>
         </div>
