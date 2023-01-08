@@ -18,9 +18,9 @@ export default function MyProfile(){
               <span className="emoji" role="img">🤎</span>  by Harsh</h5>
               <p className="card-text">Connect with me.</p>
               <p>
-                <span className='github_img' role="image"><img src={github} style={{maxWidth: 30,position:'relative',left:'auto',marginRight:'5px'}}/></span>
-                <span className='Linkedin_img' role="image"><img src={ln} style={{maxWidth: 30,position:'relative',left:'auto',marginRight:'5px'}}/></span>
-                <span className='twitter_img' role="image"><img src={twitter} style={{maxWidth: 30,position:'relative',left:'auto',marginRight:'5px'}}/></span>
+                <span className='github_img' ><img alt="githubImage" src={github} style={{maxWidth: 30,position:'relative',left:'auto',marginRight:'5px'}}/></span>
+                <span className='Linkedin_img' ><img alt="linkedinImage" src={ln} style={{maxWidth: 30,position:'relative',left:'auto',marginRight:'5px'}}/></span>
+                <span className='twitter_img' ><img alt="twitterImage" src={twitter} style={{maxWidth: 30,position:'relative',left:'auto',marginRight:'5px'}}/></span>
               </p>
               <p className="card-text"><small style={{color: "white"}}>Last updated 3 mins ago</small></p>
             </div>

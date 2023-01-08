@@ -1,4 +1,4 @@
-import React,{useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './Searchbar.css';
 import MyProfile from './MyProfile';
 import Results from './Results.js';
