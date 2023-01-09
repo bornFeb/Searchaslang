@@ -2,6 +2,7 @@
   text-align: center;
   background-image: linear-gradient(rgb(186, 50, 50),rgb(245, 232, 207));
   min-height: 100vh;
+  z-index: -1;
   background-repeat: no-repeat;
   background-size: cover;
 }
