@@ -48,7 +48,7 @@ class Result extends Component{
                     await navigator.clipboard.writeText(slang.Meaning)
                     alert('Text copied!');
                   }}>
-                    <h4 style={{borderBottomStyle: "groove", fontSize: "20px",paddingBottom:"8px"}}><b>{slang.Slang}</b> - <i style={{fontFamily: "cursive"}}   >{slang.Meaning}</i></h4>
+                    <h4 style={{borderBottomStyle: "groove", fontSize: "20px",paddingBottom:"8px"}}><b>{slang.Slang}</b> - <i style={{fontFamily: "monospace"}}   >{slang.Meaning}</i></h4>
                   </div>
                 )
               })
