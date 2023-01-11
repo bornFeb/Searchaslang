@@ -2,9 +2,10 @@ import {Component} from 'react';
 import data from "../csvjson.json";
 
 
-class Result extends Component{
-
+class Result extends Component{  
+ 
   render() {
+
 
     if(this.props.ans === ''){
       return (
@@ -16,7 +17,7 @@ class Result extends Component{
                   await navigator.clipboard.writeText(slang.Meaning)
                   alert('Text copied!');
                 }}>
-                  <h4 style={{borderBottomStyle: "groove", fontSize: "20px",paddingBottom:"8px"}} ><b>{slang.Slang}</b> - <i style={{fontFamily: "cursive"}}   >{slang.Meaning}</i></h4>
+                  <h4 style={{borderBottomStyle: "groove", fontSize: "20px",paddingBottom:"8px"}} ><b>{slang.Slang}</b> - <i style={{fontFamily: "monospace"}}   >{slang.Meaning}</i></h4>
                 </div>
               )
             })
@@ -28,23 +29,34 @@ class Result extends Component{
 
         return slang.Slang.toLowerCase().includes(this.props.ans.toLowerCase());
        })
-      
-       return (
-        <div>
-          {
-            res.map((slang, index) => {
-              return (
-                  <div key={index} aria-current="true" onClick={async()=>{
-                  await navigator.clipboard.writeText(slang.Meaning)
-                  alert('Text copied!');
-                }}>
-                  <h4 style={{borderBottomStyle: "groove", fontSize: "20px",paddingBottom:"8px"}}><b>{slang.Slang}</b> - <i style={{fontFamily: "cursive"}}   >{slang.Meaning}</i></h4>
-                </div>
-              )
-            })
-          }
-        </div>
-       )
+       if(res.length === 0){
+        return (
+          <div>
+            {
+              <h4 style={{borderBottomStyle: "groove", fontSize: "20px",paddingBottom:"8px"}}><b>No result Found.</b></h4>
+
+            }
+          </div>
+        )
+       }else{
+        return (
+          <div>
+            {
+              res.map((slang, index) => {
+                return (
+                    <div key={index} aria-current="true" onClick={async()=>{
+                    await navigator.clipboard.writeText(slang.Meaning)
+                    alert('Text copied!');
+                  }}>
+                    <h4 style={{borderBottomStyle: "groove", fontSize: "20px",paddingBottom:"8px"}}><b>{slang.Slang}</b> - <i style={{fontFamily: "cursive"}}   >{slang.Meaning}</i></h4>
+                  </div>
+                )
+              })
+            }
+          </div>
+         )
+       }
+       
     }
 
 
