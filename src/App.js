@@ -1,13 +1,14 @@
 import './App.css';
 import Searchbar from './components/Searchbar.js';
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 
 
 function App() {
 
   const [background, setBackground] = useState('');
-  const generateRandomGradient = () => {
+
+  const generateRandomGradient = useCallback( () => {
     const colors = [
       getRandomColor(),
       getRandomColor(),
@@ -17,7 +18,7 @@ function App() {
     const gradientDirection = `${getRandomDirection()}deg`;
 
     return `linear-gradient(${gradientDirection}, ${colors.join(', ')})`;
-  };
+  }, []);
   const getRandomColor = () => {
     const letters = '0123456789ABCDEF';
     let color = '#';
@@ -33,7 +34,7 @@ function App() {
   useEffect(() => {
     const randomGradient = generateRandomGradient();
     setBackground(randomGradient);
-  }, []);
+  }, [generateRandomGradient]);
 
   return (
     <div className="App"
