@@ -1,49 +1,70 @@
-@import url("https://fonts.googleapis.com/css?family=Bowlby+One+SC");
-.searchBar {
-  padding-top: 2cm;
-  display:-webkit-flex;
-  align-items: center;
-  z-index: 1;
-  flex-direction: column;
+/* Searchbar.css */
+
+/* Style for the searchbar container */
+.searchbar-container {
   display: flex;
+  
+  flex-direction: column;
+  align-items: center;
+  background-image: white  url(../images/searchicon2.jpeg)right no-repeat;
 }
 
-.list-group {
+/* Style for MyProfile component (adjust as needed) */
+.my-profile {
+  /* Your MyProfile component styling here */
+}
+
+/* Style for the search bar container */
+.searchBar {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
   border-radius: 10px;
-  width:50%;
-  padding: 0.5%;
-  margin: 0.3%;
-  align-self:inherit;
-  font-family:  'Arial Narrow Bold', sans-serif;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
 }
 
-#searchList:hover{
-  background-color: white;
-  border-bottom: 1px solid;
-  border-bottom-style: dashed;
-  border-bottom-color: red;
-  background-color: rgb(84, 164, 217);
-  background-image:url('../images/clipboard.svg');
-  background-repeat: no-repeat;
-  background-position: right;
-  background-origin:content-box;
-  cursor: pointer;
-}
-
-
-#searchList {
-  transition: 500ms;
-  background-color:white;
-}
-
+/* Style for the search input box */
 .searchBox {
-  border-radius: 3px;
-  border: 0ch;
-  width:50%;
-  padding: 0.5%;
-  margin: 0.3%;
-  align-self: center;
-  font-family:  'Arial Narrow Bold', sans-serif;
-  background:white  url(../images/searchicon2.jpeg)right no-repeat;
-  background-size: 0.9cm;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style for the results container */
+.results-container {
+  width: 100%;
+  max-height: 400px;
+  overflow-y: auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the individual result items (adjust as needed) */
+.result-item {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+
+.search-icon {
+  width: 24px; /* Adjust the width as needed */
+  height: 24px; /* Adjust the height as needed */
+  margin-left: 10px; /* Adjust the margin as needed */
+  
+}
+
+.result-item:hover {
+  background-color: #f0f0f0;
 }

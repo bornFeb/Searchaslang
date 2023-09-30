@@ -1,0 +1,42 @@
+/* Result.css */
+
+/* Style for the container of the slang results */
+.container {
+  margin: 20px;
+}
+
+/* Style for individual slang items */
+.slang-item {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.slang-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Style for the slang text */
+.slang-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Style for the meaning text */
+.meaning-text {
+  font-family: monospace;
+  margin-top: 5px;
+  color: #333; /* Adjust the color to your preference */
+}
+
+/* Style for "No result found" message */
+.no-results {
+  margin: 20px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ff0000; /* Adjust the color to your preference */
+}

@@ -1,85 +1,60 @@
-import {Component} from 'react';
+import { Component } from 'react';
 import data from "../csvjson.json";
+import React from 'react';
+import './Result.css';
 
-
-class Result extends Component{  
- 
+class Result extends Component {
   render() {
+    let content;
 
-
-    if(this.props.ans === ''){
-      return (
-        <div>
-          {
-            data.data.map((slang,index) => {
-              return (
-                <div key={index} aria-current="true" onClick={async()=>{
-                  await navigator.clipboard.writeText(slang.Meaning)
-                  alert('Text copied!');
-                }}>
-                  <h4 style={{borderBottomStyle: "groove", fontSize: "20px",paddingBottom:"8px"}} ><b>{slang.Slang}</b> - <i style={{fontFamily: "monospace"}}   >{slang.Meaning}</i></h4>
-                </div>
-              )
-            })
-          }
+    if (this.props.ans === '') {
+      content = data.data.map((slang, index) => (
+        <div
+          key={index}
+          className="slang-item"
+          onClick={async () => {
+            await navigator.clipboard.writeText(slang.Meaning);
+            alert('Text copied!');
+          }}
+        >
+          <div className="slang-text">
+            <b>{slang.Slang}</b> -
+          </div>
+          <div className="meaning-text">{slang.Meaning}</div>
         </div>
-      )
-    }else{
-       var res = data.data.filter((slang)=> {
+      ));
+    } else {
+      const res = data.data.filter((slang) =>
+        slang.Slang.toLowerCase().includes(this.props.ans.toLowerCase())
+      );
 
-        return slang.Slang.toLowerCase().includes(this.props.ans.toLowerCase());
-       })
-       if(res.length === 0){
-        return (
-          <div>
-            {
-              <h4 style={{borderBottomStyle: "groove", fontSize: "20px",paddingBottom:"8px"}}><b>No result Found.</b></h4>
-
-            }
+      if (res.length === 0) {
+        content = (
+          <div className="no-results">
+            <h4>No result Found.</h4>
           </div>
-        )
-       }else{
-        return (
-          <div>
-            {
-              res.map((slang, index) => {
-                return (
-                    <div key={index} aria-current="true" onClick={async()=>{
-                    await navigator.clipboard.writeText(slang.Meaning)
-                    alert('Text copied!');
-                  }}>
-                    <h4 style={{borderBottomStyle: "groove", fontSize: "20px",paddingBottom:"8px"}}><b>{slang.Slang}</b> - <i style={{fontFamily: "monospace"}}   >{slang.Meaning}</i></h4>
-                  </div>
-                )
-              })
-            }
+        );
+      } else {
+        content = res.map((slang, index) => (
+          <div
+            key={index}
+            className="slang-item"
+            onClick={async () => {
+              await navigator.clipboard.writeText(slang.Meaning);
+              alert('Text copied!');
+            }}
+          >
+            <div className="slang-text">
+              <b>{slang.Slang}</b> -
+            </div>
+            <div className="meaning-text">{slang.Meaning}</div>
           </div>
-         )
-       }
-       
+        ));
+      }
     }
 
-
-
-
-    // return(
-    //   <div>
-    //     { 
-    //       data.data.map((slang,index)=>{
-    //         return (
-    //           <div key={index} aria-current="true" onClick={async()=>{
-    //             await navigator.clipboard.writeText(slang.Meaning)
-    //             alert('Text copied!');
-    //           }}>
-    //             <h4 style={{borderBottomStyle: "groove", fontSize: "20px",paddingBottom:"8px"}} ><b>{slang.Slang}</b> - <i style={{fontFamily: "cursive"}}   >{slang.Meaning}</i></h4>
-
-    //           </div>
-    //         )
-    //       })
-    //     }
-    //   </div>
-    // )
+    return <div className="container">{content}</div>;
   }
 }
 
-export default Result;
+export default React.memo(Result);
