@@ -21,7 +21,6 @@ export default function MyProfile(){
           <p>Connect with me here</p>
           <p>
             <span className='github_img' ><a href='https://github.com/harshdevl' rel="noreferrer" target="_blank"><img alt="githubImage" src={github} style={{maxWidth: 30,position:'relative',left:'auto',marginRight:'10px'}}/></a></span>
-            <span className='Linkedin_img' ><a href='https://www.linkedin.com/in/harshbuddhdev5/' rel="noreferrer" target="_blank"><img alt="linkedinImage" src={ln} style={{maxWidth: 30,position:'relative',left:'auto',marginRight:'10px'}}/></a></span>
             <span className='twitter_img' ><a href='https://twitter.com/home' rel="noreferrer" target="_blank"><img alt="twitterImage" src={twitter} style={{maxWidth: 30,position:'relative',left:'auto',marginRight:'10px'}}/></a></span>            
           </p>
         </div>
