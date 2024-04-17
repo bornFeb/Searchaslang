@@ -2,7 +2,6 @@ import React from 'react'
 import logo from "../images/profile_pic.jfif";
 import github from "../images/github.webp";
 import twitter from "../images/twitter.webp";
-import ln from "../images/th.webp";
 import './myProfile.css';
 
 
